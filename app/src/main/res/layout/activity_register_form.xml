@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".RegisterForm">
+
+    <TextView
+        android:id="@+id/regTit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/regPassEt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.059"
+        tools:text="@string/regTit" />
+
+    <EditText
+        android:id="@+id/regUnEt"
+        android:layout_width="220dp"
+        android:layout_height="51dp"
+        android:hint="@string/regUnEt"
+        android:inputType="textPersonName|text"
+        app:layout_constraintBottom_toTopOf="@+id/regPassEt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.485"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regTit"
+        app:layout_constraintVertical_bias="0.674"
+        tools:text="@string/regUnEt" />
+
+    <EditText
+        android:id="@+id/regPassEt"
+        android:layout_width="220dp"
+        android:layout_height="49dp"
+        android:layout_marginBottom="492dp"
+        android:hint="@string/regPassEt"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.477"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@string/regPassEt" />
+
+    <Button
+        android:id="@+id/regRegBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="280dp"
+        android:text="@string/regRegBtn"
+        app:backgroundTint="#9F9F9F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regCh2"
+        app:layout_constraintVertical_bias="0.387"
+        tools:text="@string/regRegBtn" />
+
+    <CheckBox
+        android:id="@+id/regCh1"
+        android:layout_width="134dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="8dp"
+        android:text="@string/regCh1"
+        app:layout_constraintBottom_toTopOf="@+id/regCh2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regPassEt"
+        tools:text="@string/regCh1" />
+
+    <CheckBox
+        android:id="@+id/regCh2"
+        android:layout_width="134dp"
+        android:layout_height="43dp"
+        android:layout_marginTop="8dp"
+        android:text="@string/regCh2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/regCh1"
+        tools:text="@string/regCh2" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

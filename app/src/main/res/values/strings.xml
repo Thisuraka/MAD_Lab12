@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Lab12 - model</string>
+
+    <!--    ==================== Login Activity =======================-->
+    <string name="logTit"> The CourseApp </string>
+    <string name="logLogBtn"> Login </string>
+    <string name="logRegBtn"> Register </string>
+    <string name="logUnEt"> Username </string>
+    <string name="logPassEt"> Password </string>
+
+    <!--    ==================== Register Form Activity =======================-->
+    <string name="regTit"> Register Form </string>
+    <string name="regUnEt"> Username </string>
+    <string name="regPassEt"> Password </string>
+    <string name="regCh1"> Teacher </string>
+    <string name="regCh2"> Student </string>
+    <string name="regRegBtn"> Register </string>
+
+    <!--    ==================== Teacher Activity =======================-->
+    <string name="teaTit"> Welcome Username </string>
+    <string name="teaSubEt"> Subject </string>
+    <string name="teaMesEt"> Message </string>
+    <string name="teaSendBtn"> Send </string>
+
+    <!--    ==================== Student Activity =======================-->
+    <string name="stdTit"> Welcome Username </string>
+    <string name="stdRv">  </string>
+
+    <!--    ==================== Message Activity =======================-->
+    <string name="msgTit"> Subject </string>
+    <string name="msgEt"> Message </string>
+
+    <!--    ==================== Single row Activity =======================-->
+    <string name="sub"> Subject </string>
+    <string name="msg"> Message </string>
+</resources>

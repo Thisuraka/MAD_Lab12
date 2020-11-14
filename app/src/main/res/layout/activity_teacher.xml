@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Teacher">
+
+    <TextView
+        android:id="@+id/teaTit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/teaTit"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082"
+        tools:text="@string/teaTit" />
+
+    <EditText
+        android:id="@+id/teaSubEt"
+        android:layout_width="305dp"
+        android:layout_height="53dp"
+        android:layout_marginTop="56dp"
+        android:hint="@string/teaSubEt"
+        android:inputType="text"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.584"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teaTit"
+        app:layout_constraintVertical_bias="0.013"
+        tools:text="@string/teaSubEt" />
+
+    <EditText
+        android:id="@+id/teaMesEt"
+        android:layout_width="313dp"
+        android:layout_height="155dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="54dp"
+        android:hint="@string/teaMesEt"
+        app:layout_constraintBottom_toTopOf="@+id/teaSendBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.632"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/teaSubEt"
+        app:layout_constraintVertical_bias="0.644"
+        tools:text="@string/teaMesEt" />
+
+    <Button
+        android:id="@+id/teaSendBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="148dp"
+        android:text="@string/teaSendBtn"
+        app:backgroundTint="#9F9F9F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:text="@string/teaSendBtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

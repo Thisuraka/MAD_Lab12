@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Login" >
+
+    <TextView
+        android:id="@+id/logTit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="@string/logTit"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/logTit" />
+
+    <Button
+        android:id="@+id/logLogBtn"
+        android:layout_width="110dp"
+        android:layout_height="53dp"
+        android:text="@string/logLogBtn"
+        app:backgroundTint="#9F9F9F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.536"
+        tools:text="@string/logLogBtn" />
+
+    <EditText
+        android:id="@+id/logUnEt"
+        android:layout_width="199dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginBottom="540dp"
+        android:hint="@string/logUnEt"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logTit"
+        app:layout_constraintVertical_bias="0.189"
+        tools:text="@string/logUnEt" />
+
+    <EditText
+        android:id="@+id/logPassEt"
+        android:layout_width="199dp"
+        android:layout_height="38dp"
+        android:layout_marginTop="24dp"
+        android:hint="@string/logPassEt"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logUnEt"
+        app:layout_constraintVertical_bias="0.0"
+        tools:text="@string/logPassEt" />
+
+    <Button
+        android:id="@+id/logRegBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/logRegBtn"
+        app:backgroundTint="#9F9F9F"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.71"
+        tools:text="@string/logRegBtn" />
+</androidx.constraintlayout.widget.ConstraintLayout>
+
