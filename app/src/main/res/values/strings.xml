@@ -24,7 +24,7 @@
 
     <!--    ==================== Student Activity =======================-->
     <string name="stdTit"> Welcome Username </string>
-    <string name="stdRv">  </string>
+    <string name="stdLv">  </string>
 
     <!--    ==================== Message Activity =======================-->
     <string name="msgTit"> Subject </string>

@@ -1,24 +1,41 @@
 package com.example.lab12_model;
 
-import android.app.Activity;
 import android.content.Context;
-import android.content.Intent;
-import android.os.Build;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.animation.Animation;
-import android.view.animation.AnimationUtils;
-import android.widget.LinearLayout;
+import android.widget.ArrayAdapter;
 import android.widget.TextView;
-
-
 import androidx.annotation.NonNull;
-import androidx.recyclerview.widget.RecyclerView;
-
-import java.util.ArrayList;
+import androidx.annotation.Nullable;
 import java.util.List;
 
-public class MessageAdapter {
+public class MessageAdapter extends ArrayAdapter<Message> {
 
+    private Context context;
+    private int resource;
+    List<Message> messages;
+
+    MessageAdapter(Context context, int resource, List<Message> messages) {
+        super(context, resource, messages);
+        this.context = context;
+        this.resource = resource;
+        this.messages = messages;
+    }
+
+    @NonNull
+    @Override
+    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+        LayoutInflater inflater = LayoutInflater.from(context);
+        View row = inflater.inflate(resource, parent, false);
+
+        TextView sub = row.findViewById(R.id.sub);
+        TextView msg = row.findViewById(R.id.msg);
+
+        Message message = messages.get(position);
+        sub.setText(message.getSubject());
+        msg.setText(message.getMessage());
+
+        return row;
+    }
 }
