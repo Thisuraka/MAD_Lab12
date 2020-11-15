@@ -1,33 +1,28 @@
 package com.example.lab12_model;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.recyclerview.widget.RecyclerView;
 
-import android.app.AlertDialog;
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.View;
-import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
-import android.widget.Toast;
 
-import java.awt.font.TextAttribute;
 import java.util.ArrayList;
 import java.util.List;
 
 public class Student extends AppCompatActivity {
 
     dbHandler dbHandler;
-    List<Message> messages;
+    ArrayList<Message> messages;
+    List<String> finalList = new ArrayList<>();
     Context context;
     TextView stdTit;
     ListView stdLv;
 
-    String user;
+    String user, subject, message;
+    Integer pointer = 0, size;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,14 +38,35 @@ public class Student extends AppCompatActivity {
 
         messages = new ArrayList<>();
 
-        messages = dbHandler.getAllMessages();
+        messages = (ArrayList<Message>) dbHandler.getAllMessages();
 
-        Log.i("Tag","this shit" + messages);
+        Log.i("Tag", "this shit" + messages);
 
-        MessageAdapter adapter = new MessageAdapter(context,R.layout.activity_single_message,messages);
+        size = messages.size();
+
+        while (size != 0) {
+            Message test = messages.get(pointer);
+
+            subject = test.getSubject();
+            message = test.getMessage();
+
+            finalList.add("Subject : " + subject + "\n" +"Message: " + message);
+
+            pointer++;
+            size--;
+        }
+
+        final ArrayAdapter<String> adapter = new ArrayAdapter<>
+                (this, android.R.layout.simple_list_item_1, finalList);
         stdLv.setAdapter(adapter);
+
+//        MessageAdapter adapter = new MessageAdapter(context,R.layout.activity_single_message,messages);
+//        stdLv.setAdapter(adapter);
+
+
     }
 }
+
 
 
 
